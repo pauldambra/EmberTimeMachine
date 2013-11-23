@@ -1,4 +1,35 @@
-/* Put your CSS here */
 html, body {
-    margin: 20px;
-}
+  margin-top: 20px; }
+
+#main .row {
+  margin-left: 4em;
+  margin-right: 0; }
+
+.days {
+  margin-left: auto;
+  margin-right: auto; }
+
+.day {
+  border: solid 1px #237696;
+  border-radius: 4px;
+  padding: 0px;
+  height: 5em;
+  background: -webkit-radial-gradient(circle, #ece8e8, white);
+  margin-right: 0.5em;
+  text-align: center;
+  color: gray; }
+  .day .dayHeader {
+    background-color: #237696;
+    color: white;
+    font-weight: bolder;
+    text-align: -webkit-center;
+    height: 2em;
+    line-height: 2em; }
+  .day:last-child {
+    margin-right: 0; }
+  .day .dayPart {
+    min-height: 1.4em; }
+    .day .dayPart:hover {
+      background-color: black;
+      color: white;
+      cursor: pointer; }

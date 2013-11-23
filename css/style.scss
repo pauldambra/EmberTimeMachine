@@ -1,0 +1,44 @@
+
+html, body {
+    margin-top: 20px;
+}
+
+#main {
+	.row {
+		margin-left: 4em;
+		margin-right: 0;
+	}
+}
+.days {
+	margin-left: auto;
+	margin-right: auto;
+}
+.day {
+	border: solid 1px rgb(35, 118, 150);
+	border-radius: 4px;
+	padding: 0px;
+	height: 5em;
+	background: -webkit-radial-gradient(circle, #ECE8E8, #FFFFFF);
+	margin-right:0.5em;
+	text-align: center;
+	color:gray;
+	.dayHeader {
+		background-color: rgb(35, 118, 150);
+		color:white;
+		font-weight: bolder;
+		text-align: -webkit-center;
+		height: 2em;
+		line-height: 2em;
+	}
+	&:last-child{
+		margin-right:0;
+	}
+	.dayPart {
+		min-height: 1.4em;
+		&:hover {
+			background-color:black;
+			color:white;
+			cursor: pointer;
+		}
+	}
+}
