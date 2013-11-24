@@ -7,14 +7,14 @@ App.Router.map(function() {
 App.Day = Ember.Object.extend({
   date: function() {
     return moment().day(this.get('dayName')).format('MMM Do');
-  }.property()
+  }.property('dayName')
 });
 
 App.IndexRoute = Ember.Route.extend({
   model: function() {
     return {
-      FocusDate: new Date(),
-      Days: [
+      focusDate: new Date(),
+      days: [
     	App.Day.create({dayName:'Monday'}), 
     	App.Day.create({dayName:'Tuesday'}), 
     	App.Day.create({dayName:'Wednesday'}), 

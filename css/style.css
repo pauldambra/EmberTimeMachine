@@ -1,5 +1,9 @@
 html, body {
-  margin-top: 20px; }
+  margin-top: 3em; }
+
+.navbar h1 {
+  margin-left: 4em;
+  color: white; }
 
 #main .row {
   margin-left: 4em;
@@ -10,16 +14,16 @@ html, body {
   margin-right: auto; }
 
 .day {
-  border: solid 1px #237696;
+  border: solid 1px black;
   border-radius: 4px;
   padding: 0px;
   height: 5em;
-  background: -webkit-radial-gradient(circle, #ece8e8, white);
+  background: -webkit-radial-gradient(circle, #d6d6d6, white);
   margin-right: 0.5em;
   text-align: center;
   color: gray; }
   .day .dayHeader {
-    background-color: #237696;
+    background-color: black;
     color: white;
     font-weight: bolder;
     text-align: -webkit-center;

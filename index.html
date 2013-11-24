@@ -11,40 +11,41 @@
 <body>
 <!-- application template-->
 <script type="text/x-handlebars">
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation"></div>
-
-<div class="container" id="main">
-      <div class="row">
-        <div class="pull-left">
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <h1>Ember Time Machine</h1>
+  </div>
+  <div class="container" id="main">
+    <div class="row">
+      <div class="pull-left">
         <h2 class="hidden-xs">This Week</h2>
-      <h2 class="visible-xs">Today</h2>
-
-      <span>Today&lsquo;s date: </span>{{currentDate 'LL'}}
+        <h2 class="visible-xs">Today</h2>
+        <span>Today&lsquo;s date: </span>{{currentDate 'LL'}}
       </div>
-      </div>
-      
-      {{outlet}}
-
-</div>
+    </div>
+    {{outlet}}
+  </div>
 </script>
 
   <script type="text/x-handlebars" data-template-name="index">
-  <div class="row days">
-    {{#each day in model.Days}}
-      <div class="day col-xs-2">
-          <div class="dayHeader">
-            {{day.dayName}}: {{day.date}}
-          </div>
-          <div class="dayPart">
-            Morning
-            <span class="glyphicon glyphicon-pencil"></span>
-          </div>
-                    <div class="dayPart">
-                    Afternoon
-            <span class="glyphicon glyphicon-pencil"></span>
-          </div>
+    <div class="row days">
+      {{#each day in model.days}}
+        {{partial day}}
+      {{/each}}
+    </div>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="_day">
+    <div class="day col-xs-2">
+      <div class="dayHeader">
+        {{day.dayName}} {{day.date}}
       </div>
-    {{/each}}</div>
+      <div class="dayPart">
+        Morning <span class="glyphicon glyphicon-pencil"></span>
+      </div>
+      <div class="dayPart">
+        Afternoon <span class="glyphicon glyphicon-pencil"></span>
+      </div>
+    </div>
   </script>
 
   <script src="js/libs/jquery-1.9.1.js"></script>
